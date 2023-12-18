@@ -64,4 +64,4 @@ for n in range(45000000, 50000000 + 1):
 
 ### Ссылки на используемые материалы
 https://evil-teacher.on.fleek.co/prog_pm/lab06/
-https://otvet.mail.ru/question/225218959# lab06
+https://otvet.mail.ru/question/225218959
