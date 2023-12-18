@@ -11,16 +11,16 @@
 ### Ход работы    
 1. Ольга составляет таблицу кодовых слов для передачи сообщений, каждому сообщению соответствует своё кодовое слово. В качестве кодовых слов Ольга использует 4-буквенные слова, в которых есть только буквы A, B, C, D, X, Y, Z. При этом первая буква кодового слова — это буква X, Y или Z, а далее в кодовом слове буквы X, Y и Z не встречаются. Сколько различных кодовых слов может использовать Ольга?
 ```python
-count = 0
+import itertools
 
-for letter1 in ['X', 'Y', 'Z']:
-    for letter2 in ['A', 'B', 'C', 'D']:
-        for letter3 in ['A', 'B', 'C', 'D']:
-            for letter4 in ['A', 'B', 'C', 'D']:
-                word = letter1 + letter2 + letter3 + letter4
-                count += 1
+def count():
+    letters = ['A', 'B', 'C', 'D']
+    letter1 = ['X', 'Y', 'Z']
+    codewords = list(itertools.product(letter1, letters, letters, letters))
+    return len(codewords)
 
-print(count)
+num = count()
+print(num)
 ```
 - Иллюстрация решения задачи 1
 
